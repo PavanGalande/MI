@@ -93,15 +93,19 @@ public class ExcelReader {
 		String DataSets[][]=null ;
 		sheet = wb.getSheet(SheetName);
 		int TotalRows = sheet.getLastRowNum()+1;
+		System.out.println(TotalRows);
 		int TotalCols = sheet.getRow(0).getLastCellNum();
+		System.out.println(TotalCols);
+		
 		
 		DataSets = new String [TotalRows -1][TotalCols];
 		
 		for(int i=1;i<TotalRows ;i++){
 			Row = sheet.getRow(i);
-			for(int j=0; j<TotalCols; j++){
+			System.out.println(Row);
+			for(int j=0; j<TotalCols-1; j++){
 				cell = Row.getCell(j);
-				
+				System.out.println(cell);
 				if(cell.getCellType()==Cell.CELL_TYPE_BOOLEAN){
 					String cellText = String.valueOf(cell.getBooleanCellValue());
 					 DataSets[i-1][j] = cellText ;

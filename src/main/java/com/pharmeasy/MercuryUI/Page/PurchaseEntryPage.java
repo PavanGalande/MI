@@ -20,13 +20,15 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import com.pharmeasy.MercuryUI.Base.TestBase;
 
-public class PurchaseEntryPage {
-	WebDriver driver;
-	public PurchaseEntryPage(WebDriver driver)
+
+public class PurchaseEntryPage extends TestBase {
+	
+	public PurchaseEntryPage()
 	{
+		//DOMConfigurator.configure("log4j.xml");
 		PageFactory.initElements(driver, this);
-		this.driver = driver;
 	}
 	
 	//@FindBy(linkText="/purchase")
@@ -67,7 +69,7 @@ public class PurchaseEntryPage {
     @FindBy(xpath="//div[@class='invoicemap-main-table']/table//tr/td[7]")
     private WebElement quantity;
     
-    @FindBy(xpath="//div[@class='invoicemap-main-table']/table//tr/td[12]")
+    @FindBy(xpath="//div[@class='invoicemap-main-table']/table//tr/td[11]")
     private WebElement purchaserate;
     
     @FindBy(xpath="//button[text()='Review']")
@@ -123,6 +125,25 @@ public class PurchaseEntryPage {
 
     @FindBy(xpath="/html/body/app-root/div/ng2-toasty/div/ng2-toast/div/div[2]")
     private WebElement taostMessage;
+    
+    @FindBy(xpath="/html/body/app-root/div/div[2]/div[2]/div/app-purchasesbase/div/div[2]/app-purchases/app-modal/div/div[2]/div/app-invoicechecker/div/div[3]/app-verifiertasks/div/section/div/div[2]/div[4]")
+    private WebElement VerifierTask;
+    
+    
+    @FindBy(xpath="/html/body/app-root/div/div[2]/div[2]/div/app-purchasesbase/div/div[2]/app-purchases/app-modal/div/div[2]/div/app-invoicechecker/div/div[3]/app-verifiertasks/div/section[2]/div[3]/button[2]")
+    private WebElement DownloadBarcode;
+    
+    
+    @FindBy(xpath="/html/body/app-root/div/div[2]/div[2]/div/app-purchasesbase/div/div[2]/app-purchases/app-modal/div/div[2]/div/app-invoicechecker/div/div[3]/app-verifiertasks/div/section[2]/div[3]/button[4]")
+    private WebElement DownloadPrintPutaway;
+    
+    
+    
+    
+    
+   
+    
+    
 
     
     
@@ -152,18 +173,14 @@ public class PurchaseEntryPage {
 	
 	
 
-
-	public void clickpurchaseentry() throws InterruptedException, AWTException
+    @SuppressWarnings("static-access")
+	public void clickpurchaseentry(String invNum, String medName) throws InterruptedException
 	 {
 		 
 		 
-		 int data1 = excel.getrowcount("./testdata/webTestData.xlsx", "PurchaseEntry");
-		 System.out.println(data1);
-		 driver.get("https://qa.app.mercury.pharmeasy.in/gatepass");
-		 for(int i=1;i<=data1;i++)
-		 {
-		 Thread.sleep(2000);
-		 driver.get("http://qa.app.mercury.pharmeasy.in/purchase/entry");
+		 
+		 driver.get("https://qa.app.mercuryonline.co/purchase/entry");
+		 
 		 System.out.println("clicked");
 		 Thread.sleep(10000);
 		 NewEntry.click();
@@ -172,17 +189,17 @@ public class PurchaseEntryPage {
 		 Thread.sleep(2000);
 		 Continue.click();
 		 Thread.sleep(2000);
-		 String data = excel.getcellvalue("./testdata/webTestData.xlsx", "PurchaseEntry", i, 0);
-		 System.out.println(data);
-		 InvoiceNumber.sendKeys(data);
+		 //String data = excel.getcellvalue("./testdata/webTestData.xlsx", "PurchaseEntry", i, 0);
+		 System.out.println(invNum);
+		 InvoiceNumber.sendKeys(invNum);
 		 Thread.sleep(2000);
 		 Medicinename.click();
 		 System.out.println("test");
 		 Thread.sleep(4000);
-		 String medname = excel.getcellvalue("./testdata/webTestData.xlsx", "PurchaseEntry", i, 1);
+		 //String medname = excel.getcellvalue("./testdata/webTestData.xlsx", "PurchaseEntry", i, 1);
 		 //Entername.sendKeys("hgh");
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		 medicinename.sendKeys(medname);
+		 medicinename.sendKeys(medName);
 		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		 Thread.sleep(4000);
 		 //System.out.println( driver.findElement(By.id("search")));
@@ -212,13 +229,19 @@ public class PurchaseEntryPage {
 		 Thread.sleep(3000);
 		 Create.click();
 		 Thread.sleep(6000);
-		 printbarcode.click();
+		 VerifierTask.click();
+		 Thread.sleep(3000);
+		 
+		 DownloadBarcode.click();
+		 Thread.sleep(2000);
+		 //printbarcode.click();
+		 //Thread.sleep(8000);
+		 DownloadPrintPutaway.click();
+		 //printputaway.click();
 		 Thread.sleep(8000);
-		 printputaway.click();
-		 Thread.sleep(8000);
-		 makeinventorylive.click();
-		 Thread.sleep(20000);
-		 }
+		 //makeinventorylive.click();
+		 //Thread.sleep(20000);
+		 
 	 }
 		 
 		 public void Fileupload() throws InterruptedException

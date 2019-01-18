@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pharmeasy.MercuryUI.Gatepass.CreateGatepassNegativeCase">
+      <class name="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry">
         <methods>
           <include name="afterMethod"/>
           <include name="endTest"/>
-          <include name="createGatepassNegativeCase" invocation-numbers="1"/>
           <include name="beforeMethod"/>
+          <include name="purchaseEntry" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.pharmeasy.MercuryUI.Gatepass.CreateGatepassNegativeCase -->
+      </class> <!-- com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
