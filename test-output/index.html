@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry" hash-for-method="purchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)">purchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,12 +102,17 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry" hash-for-method="purchaseEntry(ne31, GOLD COAT LOTION 120ML, null)">purchaseEntry(ne31, GOLD COAT LOTION 120ML, null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase" hash-for-method="NegativePurchaseEntry(ne12, DOLO 120MG SUSP , null)">NegativePurchaseEntry(ne12, DOLO 120MG SUSP , null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry" hash-for-method="purchaseEntry(ne12, DOLO 120MG SUSP , null)">purchaseEntry(ne12, DOLO 120MG SUSP , null)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase" hash-for-method="NegativePurchaseEntry(ne31, GOLD COAT LOTION 120ML, null)">NegativePurchaseEntry(ne31, GOLD COAT LOTION 120ML, null)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase" hash-for-method="NegativePurchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)">NegativePurchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -136,101 +127,34 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="purchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)">
-                  </a> <!-- purchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null) -->
-                  <span class="method-name">purchaseEntry</span>
-                  <span class="parameters">(ne41, CROCIN ADVANCE 500MG TAB, null)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;/html/body/app-root/div/div[2]/div[2]/div/app-purchasesbase/div/div[2]/app-purchases/app-modal/div/div[2]/div/app-invoicechecker/div/div[3]/app-verifiertasks/div/section/div/div[2]/div[4]&quot;}
-  (Session info: chrome=71.0.3578.98)
-  (Driver info: chromedriver=2.37.544337 (8c0344a12e552148c185f7d5117db1f28d6c9e85),platform=Mac OS X 10.11.6 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;Pavans-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:f65c:89ff:feaf:3a8d%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.6&apos;, java.version: &apos;1.8.0_161&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544337 (8c0344a12e5521..., userDataDir: /var/folders/1m/xdgrtg9j2vs...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 71.0.3578.98, webStorageEnabled: true}
-Session ID: 91fa6cfb41d43667a774a3eee4150713
-*** Element info: {Using=xpath, value=/html/body/app-root/div/div[2]/div[2]/div/app-purchasesbase/div/div[2]/app-purchases/app-modal/div/div[2]/div/app-invoicechecker/div/div[3]/app-verifiertasks/div/section/div/div[2]/div[4]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy11.click(Unknown Source)
-	at com.pharmeasy.MercuryUI.Page.PurchaseEntryPage.clickpurchaseentry(PurchaseEntryPage.java:232)
-	at com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry.purchaseEntry(PurchaseEntry.java:45)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry</span>
+              <span class="class-name">com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="purchaseEntry(ne31, GOLD COAT LOTION 120ML, null)">
-                  </a> <!-- purchaseEntry(ne31, GOLD COAT LOTION 120ML, null) -->
-                  <span class="method-name">purchaseEntry</span>
+                  <a name="NegativePurchaseEntry(ne12, DOLO 120MG SUSP , null)">
+                  </a> <!-- NegativePurchaseEntry(ne12, DOLO 120MG SUSP , null) -->
+                  <span class="method-name">NegativePurchaseEntry</span>
+                  <span class="parameters">(ne12, DOLO 120MG SUSP , null)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NegativePurchaseEntry(ne31, GOLD COAT LOTION 120ML, null)">
+                  </a> <!-- NegativePurchaseEntry(ne31, GOLD COAT LOTION 120ML, null) -->
+                  <span class="method-name">NegativePurchaseEntry</span>
                   <span class="parameters">(ne31, GOLD COAT LOTION 120ML, null)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="purchaseEntry(ne12, DOLO 120MG SUSP , null)">
-                  </a> <!-- purchaseEntry(ne12, DOLO 120MG SUSP , null) -->
-                  <span class="method-name">purchaseEntry</span>
-                  <span class="parameters">(ne12, DOLO 120MG SUSP , null)</span>
+                  <a name="NegativePurchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)">
+                  </a> <!-- NegativePurchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null) -->
+                  <span class="method-name">NegativePurchaseEntry</span>
+                  <span class="parameters">(ne41, CROCIN ADVANCE 500MG TAB, null)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,7 +162,7 @@ Session ID: 91fa6cfb41d43667a774a3eee4150713
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/1m/xdgrtg9j2vs1c3679_rxf9s40000gn/T/testng-eclipse-1171923461/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/1m/xdgrtg9j2vs1c3679_rxf9s40000gn/T/testng-eclipse-1512689923/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -247,7 +171,11 @@ Session ID: 91fa6cfb41d43667a774a3eee4150713
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry&quot;/&gt;
+      &lt;class name=&quot;com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;NegativePurchaseEntry&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -289,22 +217,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'purchaseEntry')
-data.setCell(0, 2, 'com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry')
-data.setCell(0, 3, 72805);
+data.setCell(0, 1, 'NegativePurchaseEntry')
+data.setCell(0, 2, 'com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase')
+data.setCell(0, 3, 51604);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'purchaseEntry')
-data.setCell(1, 2, 'com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry')
-data.setCell(1, 3, 71541);
+data.setCell(1, 1, 'NegativePurchaseEntry')
+data.setCell(1, 2, 'com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase')
+data.setCell(1, 3, 51018);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'purchaseEntry')
-data.setCell(2, 2, 'com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry')
-data.setCell(2, 3, 71513);
+data.setCell(2, 1, 'NegativePurchaseEntry')
+data.setCell(2, 2, 'com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase')
+data.setCell(2, 3, 50988);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -330,48 +258,46 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry.purchaseEntry(java.lang.String,java....)</span>
+                <span class="method-name">beforeMethod(public void com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase.NegativePurchaseEntry(ja...)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">purchaseEntry(ne12, DOLO 120MG SUSP , null)</span>
-                <span class="method-start">7068 ms</span>
+                <span class="method-name">NegativePurchaseEntry(ne12, DOLO 120MG SUSP , null)</span>
+                <span class="method-start">6827 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=purchaseEntry status=SUCCESS method=PurchaseEntry.purchaseEntry(java.lang.String, j...)</span>
-                <span class="method-start">78611 ms</span>
+                <span class="method-name">afterMethod([TestResult name=NegativePurchaseEntry status=SUCCESS method=PurchaseEntryNegativeCase.NegativePurch...)</span>
+                <span class="method-start">57840 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry.purchaseEntry(java.lang.String,java....)</span>
-                <span class="method-start">78671 ms</span>
+                <span class="method-name">beforeMethod(public void com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase.NegativePurchaseEntry(ja...)</span>
+                <span class="method-start">58009 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">purchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)</span>
-                <span class="method-start">84803 ms</span>
+                <span class="method-name">NegativePurchaseEntry(ne41, CROCIN ADVANCE 500MG TAB, null)</span>
+                <span class="method-start">69889 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=purchaseEntry status=FAILURE method=PurchaseEntry.purchaseEntry(java.lang.String, j...)</span>
-                <span class="method-start">157618 ms</span>
+                <span class="method-name">afterMethod([TestResult name=NegativePurchaseEntry status=SUCCESS method=PurchaseEntryNegativeCase.NegativePurch...)</span>
+                <span class="method-start">120908 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry.purchaseEntry(java.lang.String,java....)</span>
-                <span class="method-start">157785 ms</span>
+                <span class="method-name">beforeMethod(public void com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase.NegativePurchaseEntry(ja...)</span>
+                <span class="method-start">121024 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">purchaseEntry(ne31, GOLD COAT LOTION 120ML, null)</span>
-                <span class="method-start">163148 ms</span>
+                <span class="method-name">NegativePurchaseEntry(ne31, GOLD COAT LOTION 120ML, null)</span>
+                <span class="method-start">125477 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=purchaseEntry status=SUCCESS method=PurchaseEntry.purchaseEntry(java.lang.String, j...)</span>
-                <span class="method-start">234663 ms</span>
+                <span class="method-name">afterMethod([TestResult name=NegativePurchaseEntry status=SUCCESS method=PurchaseEntryNegativeCase.NegativePurch...)</span>
+                <span class="method-start">177082 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">endTest</span>
-                <span class="method-start">234723 ms</span>
+                <span class="method-start">177254 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

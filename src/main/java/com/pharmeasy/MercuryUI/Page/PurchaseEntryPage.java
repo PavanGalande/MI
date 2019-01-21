@@ -137,6 +137,9 @@ public class PurchaseEntryPage extends TestBase {
     @FindBy(xpath="/html/body/app-root/div/div[2]/div[2]/div/app-purchasesbase/div/div[2]/app-purchases/app-modal/div/div[2]/div/app-invoicechecker/div/div[3]/app-verifiertasks/div/section[2]/div[3]/button[4]")
     private WebElement DownloadPrintPutaway;
     
+    @FindBy(xpath="/html/body/app-root/div/ng2-toasty/div/ng2-toast/div/div[2]")
+    private WebElement Errormessage1;
+    
     
     
     
@@ -244,6 +247,82 @@ public class PurchaseEntryPage extends TestBase {
 		 
 	 }
 		 
+    @SuppressWarnings("static-access")
+   	public void NegativePurchaseEntry(String invNum, String medName) throws InterruptedException
+   	 {
+   		 
+   		 
+   		 
+   		 driver.get("https://qa.app.mercuryonline.co/purchase/entry");
+   		 
+   		 System.out.println("clicked");
+   		 Thread.sleep(10000);
+   		 NewEntry.click();
+   		 Thread.sleep(2000);
+   		 SelectVendor.click();
+   		 Thread.sleep(2000);
+   		 Continue.click();
+   		 Thread.sleep(2000);
+   		 //String data = excel.getcellvalue("./testdata/webTestData.xlsx", "PurchaseEntry", i, 0);
+   		 System.out.println(invNum);
+   		 InvoiceNumber.sendKeys(invNum);
+   		 Thread.sleep(2000);
+   		
+   		 Medicinename.click();
+   		 System.out.println("test");
+   		 Thread.sleep(4000);
+   		 //String medname = excel.getcellvalue("./testdata/webTestData.xlsx", "PurchaseEntry", i, 1);
+   		 //Entername.sendKeys("hgh");
+   		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+   		 medicinename.sendKeys(medName);
+   		// driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+   		 Thread.sleep(4000);
+   		 //System.out.println( driver.findElement(By.id("search")));
+   		 medicinename.sendKeys(Keys.ENTER);
+   		 System.out.println("done");
+   		 Thread.sleep(2000);
+   		 //Entername.sendKeys("XBEND SUSP");
+   		 System.out.println("test");
+   		 //MedicineName.sendKeys("XBEND SUSP");	
+   		// quantity.click();
+   		 Thread.sleep(3000);
+   		 Actions actions = new Actions(driver);
+   	     actions.moveToElement(quantity);
+   	     actions.click();
+   	     actions.sendKeys("5");
+   	     actions.build().perform();
+   		 Thread.sleep(4000);
+   		 //quantity.sendKeys("5");
+   		 
+   		 Actions actions1 = new Actions(driver);
+   	     actions.moveToElement(purchaserate);
+   	     actions.click();
+   	     actions.sendKeys("10");
+   	     actions.build().perform();
+   		 Thread.sleep(4000);
+   		 review.click();
+   		 Thread.sleep(3000);
+   		 Create.click();
+   		 Thread.sleep(2000);
+   		 String text = Errormessage1.getText();
+		 System.out.println(text+"printtest");
+		 assertEquals("Duplicate invoice", text);
+		 System.out.println("passed");
+		 Thread.sleep(2000);
+   		 /*VerifierTask.click();
+   		 Thread.sleep(3000);
+   		 
+   		 DownloadBarcode.click();
+   		 Thread.sleep(2000);
+   		 //printbarcode.click();
+   		 //Thread.sleep(8000);
+   		 DownloadPrintPutaway.click();
+   		 //printputaway.click();
+   		 Thread.sleep(8000);*/
+   		 //makeinventorylive.click();
+   		 //Thread.sleep(20000);
+   		 
+   	 }
 		 public void Fileupload() throws InterruptedException
 		 {
 			 Thread.sleep(2000);
@@ -286,6 +365,9 @@ public class PurchaseEntryPage extends TestBase {
 	 
 		 
 	 }
+
+
+
 	//*[@id="search"]
 	
 

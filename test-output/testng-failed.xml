@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry">
+      <class name="com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase">
         <methods>
           <include name="afterMethod"/>
           <include name="endTest"/>
           <include name="beforeMethod"/>
-          <include name="purchaseEntry" invocation-numbers="1"/>
+          <include name="NegativePurchaseEntry" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntry -->
+      </class> <!-- com.pharmeasy.MercuryUI.PurchaseEntry.PurchaseEntryNegativeCase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
